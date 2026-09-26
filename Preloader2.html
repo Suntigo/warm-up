@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: down 10s linear 1 forwards ;
+            position: relative;
+            animation-play-state: paused;
+        }
+        @keyframes down {
+            0%{
+                 background:linear-gradient(to bottom, white,white) ;
+            }
+            20%{
+                background:linear-gradient(to bottom, rgb(54, 52, 52) 0%,rgb(54, 52, 52) 20%,white 20%) ;
+            }
+            40%{
+                 background:linear-gradient(to bottom, rgb(54, 52, 52) 20%, rgb(54, 52, 52) 40%,white 40%) ;
+            }
+            60%{
+                 background:linear-gradient(to bottom, rgb(54, 52, 52) 40%, rgb(54, 52, 52)  60%, white 60% ) ;
+            }
+            80%{
+                background:linear-gradient(to bottom, rgb(54, 52, 52) 60%, rgb(54, 52, 52) 80%, white 80% ) ;
+            }
+            100%{
+                background:linear-gradient(to bottom, rgb(54, 52, 52) 80%, rgb(54, 52, 52) 100% ) ;
+            }
+            
+        }
+       
+        button{
+            width: 350px;
+            height: 20px;
+            background:linear-gradient(to bottom right,red,yellow) ;
+            z-index: 1;
+            
+        }
+        .div1{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color:rgba(18, 18, 18, 0.979);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5; 
+            visibility: hidden;
+            
+        }
+        .div2{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 5px red solid;
+            border-top: 5px solid transparent;
+            animation: border 0.5s linear infinite;
+            position: relative;
+            animation-play-state: paused;
+            border-left: 4px solid rgb(42, 42, 105);
+            filter: drop-shadow(3px 3px 3px rgb(9, 9, 219));
+
+
+            
+         
+        }
+        @keyframes border {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+    </style>
+</head>
+<body id="body">
+    <button id="bu" onclick="load()">Enter</button>
+    <div class="div1" id="div1">
+        <div class="div2" id="div2"></div>
+    </div>
+
+
+    <script>
+     function load() {
+        document.getElementById("body").style.animationPlayState="running"
+        document.getElementById("body").style.backgroundColor="rgb(83, 82, 82)"
+        document.getElementById("div1").style.position="absolute"
+        document.getElementById("div2").style.animationPlayState="running"
+        document.getElementById("div1").style.visibility="visible"
+     }
+
+    </script>
+</body>
+</html>

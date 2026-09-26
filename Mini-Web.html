@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            height: 50px;
+            gap:10px;
+            background-color: blue;
+            border: 5px dotted black;
+            font-size: 32px;
+            animation: border 5s linear infinite;
+            position: relative;
+            animation-play-state: paused;
+
+            /*why does animation only happen with positioned elements , it doesnt */
+            
+    
+        }
+        img{
+            width: 30px;
+            height: 30px;
+     
+        }
+
+            @keyframes border {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <button id="bu" onclick="Transform()">Delivery <img src="truck-fast-solid-full.svg" alt="">  </button>
+   <img src="download-solid-full.svg" alt="" id="pic2">
+
+    <script>
+    
+    let pic =  document.getElementById("pic2").outerHTML
+
+
+
+
+   
+
+
+    function Transform() {
+      document.getElementById("bu").innerHTML="........"
+       document.getElementById("bu").innerHTML=""
+        document.getElementById("bu").style.width="100px"
+          document.getElementById("bu").style.height="100px"
+          document.getElementById("bu").style.borderRadius="50%"
+            document.getElementById("bu").style.borderTop="3px solid transparent"
+            document.getElementById("bu").style.animationPlayState="running"
+             document.getElementById("bu").innerHTML=pic 
+                  
+    }
+
+    </script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
