@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            perspective: 200px;
+        }
+        .container{
+            transform-style: preserve-3d;
+        }
+      
+        div{
+            border-radius: 100px;
+            text-align: center;
+          
+        }
+        .item1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 250px;
+            left: 450px;
+            animation:left 10s linear infinite forwards ;
+            animation-play-state: paused;
+            transform: translateZ(150px);
+        }
+
+           @keyframes left {
+            0%{
+                left: 450px;
+            }
+            100%{
+                left: 300px;
+            }
+            
+           }
+
+
+          .item2{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            position: relative;
+            left: 120px;
+            top: 100px;
+             animation: top 10s linear infinite forwards ;
+            animation-play-state: paused;
+            transform: translateZ(150px);
+        }
+
+        @keyframes top {
+            0%{
+                top: 100px;
+            }
+            100%{
+                top: 0px;
+            }
+            
+        }
+
+
+
+          .item3{
+            width: 350px;
+            height: 350px;
+            background-color: rgb(35, 34, 34);
+            border-radius: 200px;
+            transform: translateZ(0px);
+            transition: transform 2s ease , filter 2s ease  ;
+            
+        }
+        .item3:hover{
+            filter: drop-shadow( 0px 0px 10px grey)
+            drop-shadow( 0px 0px 12px aqua);
+
+            transform: translateZ(-500px);
+        }
+
+          .item4{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: relative;
+            left: 120px;
+            top: -100px;
+            z-index: -1;
+           animation:bottom 10s linear infinite forwards ;
+            animation-play-state: paused;
+            transform: translateZ(150px);
+        }
+        @keyframes bottom {
+            0%{
+                top: -100px;
+            }
+
+            100%{
+                top: 0px;
+            }
+            
+        }
+          .item5{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: 250px;
+            right: 450px; 
+            z-index: -1;
+             animation:right 10s linear infinite forwards ;
+            animation-play-state: paused;
+            transform: translateZ(150px);
+            
+        }
+
+        @keyframes right {
+
+            0%{
+                right: 450px;
+            }
+            100%{
+                right: 300px;
+            }
+            
+        }
+
+  
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">Home </div>
+        <div class="item2">Settings</div>
+        <div class="item3"></div>
+        <div class="item4">Analytics</div>
+        <div class="item5">Profile</div>
+    </div>
+    <!-- can divs be given onclick function so that i can click on the div and the animation will play-->
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+        .div1{
+            width: 350px;
+            height: 80px;
+            border-radius: 50px;
+            background-color: transparent;
+            border: 3px solid white;
+        }
+        .div2{
+            width: 350px;
+            height: 80px;
+            border-radius: 50px;
+            background-color: blue;
+            visibility:hidden;
+        }
+        .div2:hover{
+           visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2"></div>
+    </div>
+</body>
+</html>

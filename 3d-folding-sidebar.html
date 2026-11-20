@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:radial-gradient(circle at 100% 100%, rgb(230, 230, 12) 20%,transparent 20%),radial-gradient(circle at 30% 0%, red 40%, transparent 40%),cadetblue;
+            
+        
+        }
+        
+        .container{
+            width:350px;
+            height: fit-content;
+            padding: 25px;
+            background-color: rgb(28, 64, 64);
+        
+        }
+        .top{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-bottom: 5px solid grey;
+            width: 100%;
+            height: fit-content;
+           
+
+        }
+        .top3 button{
+            background-color: black;
+            color: white;
+            border: 3px inset black;
+
+        }
+        .heading{
+            font-size: 22px;
+            color: cornflowerblue;
+        }
+        .item{
+            width: 100%;
+            height: 80px;
+            background-color: transparent;
+            border-radius: 20%;
+            color: white;
+            font-size: 22px;
+        
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 20px;
+            
+        }
+        .item:hover{
+            box-shadow:5px 5px 5px aqua;
+        }
+
+        .img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+        
+       
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+
+
+        <div class="top">
+
+            <div class="top1"><img src="" alt=""></div>
+
+            <div class="top2">
+                <p class="heading">
+                    3D Sidebar
+                </p>   
+                <p>
+                    Adetutu Josiah
+                </p>
+            </div>
+             
+            <div class="top3">
+                <button id="Fold" onclick="Fold()"><</button>
+            </div>
+        </div>
+
+        <div class="item i1" id="i1"><p>Home</p></div>
+        <div class="item i2" id="i2">Analytics</div>
+        <div class="item i3" id="i3">Settings</div>
+        <div class="item i4" id="i4">Profile</div>
+
+
+
+    </div>
+
+
+    <img src="settings.png" alt="" id="set" class="img">
+    <img src="home.png" alt="" id="home" class="img">
+    <img src="analytics.svg"  id="ana"   alt="" class="img">
+    <img src="profile.svg" alt="" id="pro" class="img">
+
+    <script>
+       
+       let home = document.getElementById("home").outerHTML
+       let set = document.getElementById("set").outerHTML
+       let analytics = document.getElementById("ana").outerHTML
+      let profile = document.getElementById("pro").outerHTML;
+             
+          
+
+
+        function Fold(){
+         document.getElementById("container").style.width="100px"
+         document.getElementById("i1").innerHTML=home
+          document.getElementById("i2").innerHTML=analytics
+           document.getElementById("i3").innerHTML=set
+            document.getElementById("i4").innerHTML=profile
+        }
+
+
+
+    // how to store an image into a variable
+    </script>
+
+
+
+</body>
+</html>

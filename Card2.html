@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+     
+        }
+        div{
+            width: 350px;
+            height: 250px;
+            background: radial-gradient( circle at 100% 0%, blue 20%, transparent 20%),black; 
+            border: 3px solid white;   
+            transition: background-color  5s;    /*why isnt the transition working*/
+            /* text-align: center; why didnt it work */
+            font-size: 32px;
+            font-weight: bolder;
+            line-height: 150px;
+            padding: 20px;
+        }
+        div:hover{
+            background: radial-gradient( circle at 100% 0%, blue 80%,transparent 80%),black;    
+        }
+
+        /*what does translate z do , try making it more slanty*/
+
+    </style>
+</head>
+<body>
+    <div>BE HUMBLE</div>
+</body>
+</html>

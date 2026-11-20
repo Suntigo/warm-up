@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: aliceblue;
+        }
+    
+        .div{
+            width: 450px;
+            height: 50px;
+            background-color: blue;
+            transition:height 10s;
+            
+        }
+        .div:hover{
+          height: 450px;
+        }
+
+        .div2{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            animation: move 10s forwards infinite;
+            position: relative;
+            left: -100px;
+        }
+        @keyframes move {
+            0%{
+                left: -100px;
+            }
+            10%{
+                left: 250px;
+            }
+            20%{
+                left: 250px;
+                top: 50px;
+            }
+            100%{
+                left: -200px;
+                top: 50px;
+            }
+
+            
+        }
+
+        /*its like the position im setting isnt working*/
+    </style>
+</head>
+<body>
+    <!--preloader where a div moves left to right then down then right to left as a bigger
+     box is loading-->
+
+     <!-- testing the big-box loading-->
+
+     <div class="container">
+
+         <div class="div"></div>
+         
+         <div class="div2"></div>
+
+    </div>
+</body>
+</html>

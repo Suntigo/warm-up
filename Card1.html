@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 500px;
+            transform-style: preserve-3d;
+        }
+        div{
+            width: 350px;
+            height: 250px;
+            background-color: yellow;
+            border: 3px solid black;
+            filter: drop-shadow(10px 10px 10px yellow);
+            border-radius: 20%;
+            transform-origin: left;
+            transition: transform  5s;
+            
+        
+        }
+        div:hover{
+            transform: rotateY(30deg) ;
+        }
+
+        /*what does translate z do , try making it more slanty*/
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

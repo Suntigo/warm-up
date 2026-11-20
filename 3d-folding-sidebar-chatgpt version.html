@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Sidebar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                radial-gradient(circle at 100% 100%, rgb(230, 230, 12) 20%, transparent 20%),
+                radial-gradient(circle at 30% 0%, red 40%, transparent 40%),
+                cadetblue;
+        }
+
+        .container {
+            width: 350px;
+            height: fit-content;
+            padding: 25px;
+
+            background-color: rgb(28, 64, 64);
+
+            transition: width 0.3s ease;
+            overflow: hidden;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom: 5px solid grey;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        .top2 {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .top3 button {
+            background-color: black;
+            color: white;
+            border: 3px inset black;
+            cursor: pointer;
+        }
+
+        .heading {
+            font-size: 22px;
+            color: cornflowerblue;
+            margin-bottom: 0;
+        }
+
+        .top2 p:last-child {
+            color: white;
+        }
+
+        .item {
+            width: 100%;
+            min-height: 60px;
+
+            background-color: transparent;
+            border-radius: 10px;
+
+            color: white;
+            font-size: 22px;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+
+            margin-top: 20px;
+            padding: 10px;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            box-shadow: 5px 5px 5px aqua;
+        }
+
+        /* Images inside the sidebar */
+        .item img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .item span {
+            white-space: nowrap;
+        }
+
+        /* COLLAPSED SIDEBAR */
+        .container.collapsed {
+            width: 100px;
+            padding: 15px;
+        }
+
+        /* Hide heading and profile name */
+        .container.collapsed .top2 {
+            display: none;
+        }
+
+        /* Center the button */
+        .container.collapsed .top {
+            justify-content: center;
+        }
+
+        /* Center the icons */
+        .container.collapsed .item {
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        /* Hide menu text */
+        .container.collapsed .item span {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+
+        <!-- SIDEBAR HEADER -->
+        <div class="top">
+
+            <div class="top1">
+                <!-- You can add a profile image here -->
+            </div>
+
+            <div class="top2">
+                <p class="heading">3D Sidebar</p>
+                <p>Adetutu Josiah</p>
+            </div>
+
+            <div class="top3">
+                <button id="Fold" onclick="Fold()">&lt;</button>
+            </div>
+
+        </div>
+
+        <!-- HOME -->
+        <div class="item">
+            <img src="home.png" alt="Home">
+            <span>Home</span>
+        </div>
+
+        <!-- ANALYTICS -->
+        <div class="item">
+            <span>Analytics</span>
+        </div>
+
+        <!-- SETTINGS -->
+        <div class="item">
+            <img src="settings.png" alt="Settings">
+            <span>Settings</span>
+        </div>
+
+        <!-- PROFILE -->
+        <div class="item">
+            <span>Profile</span>
+        </div>
+
+    </div>
+
+    <script>
+
+        function Fold() {
+
+            let container = document.getElementById("container");
+            let button = document.getElementById("Fold");
+
+            // Toggle sidebar width
+            container.classList.toggle("collapsed");
+
+            // Change button direction
+            if (container.classList.contains("collapsed")) {
+
+                button.innerHTML = "&gt;";
+
+            } else {
+
+                button.innerHTML = "&lt;";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
